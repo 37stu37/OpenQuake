@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nrml xmlns:gml="http://www.opengis.net/gml" xmlns="http://openquake.org/xmlns/nrml/0.4">
+    <logicTree logicTreeID="lt1">
+
+        <logicTreeBranchingLevel branchingLevelID="bl1">
+            <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs1" applyToTectonicRegionType="Active Shallow Crust">
+
+                <logicTreeBranch branchID="AbM">
+ <uncertaintyModel>AbrahamsonEtAl2014</uncertaintyModel>
+                    <uncertaintyWeight>1.0</uncertaintyWeight>
+                </logicTreeBranch>
+
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+        <logicTreeBranchingLevel branchingLevelID="bl2">
+            <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs2"
+                    applyToTectonicRegionType="Volcanic">
+                <logicTreeBranch branchID="b1">
+ <uncertaintyModel>Bradley2013Volc</uncertaintyModel>
+                    <uncertaintyWeight>0.5</uncertaintyWeight>
+                </logicTreeBranch>
+                <logicTreeBranch branchID="b2">
+ <uncertaintyModel>McVerry2006Volc</uncertaintyModel>
+                    <uncertaintyWeight>0.5</uncertaintyWeight>
+                </logicTreeBranch>		
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+        <logicTreeBranchingLevel branchingLevelID="bl3">
+            <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs3"
+                    applyToTectonicRegionType="Subduction Interface">
+                <logicTreeBranch branchID="AB_SI">
+ <uncertaintyModel>AtkinsonBoore2003SInter</uncertaintyModel>
+                    <uncertaintyWeight>0.25</uncertaintyWeight>
+                </logicTreeBranch>
+                <logicTreeBranch branchID="M_SI">
+ <uncertaintyModel>McVerry2006SInter</uncertaintyModel>
+                    <uncertaintyWeight>0.25</uncertaintyWeight>
+                </logicTreeBranch>		
+                <logicTreeBranch branchID="Z_SI">
+ <uncertaintyModel>ZhaoEtAl2006SInter</uncertaintyModel>
+                    <uncertaintyWeight>0.25</uncertaintyWeight>
+                </logicTreeBranch>
+                <logicTreeBranch branchID="BCH2_SI">
+ <uncertaintyModel>AbrahamsonEtAl2015SInter</uncertaintyModel>
+                    <uncertaintyWeight>0.25</uncertaintyWeight>
+                </logicTreeBranch>
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+        <logicTreeBranchingLevel branchingLevelID="bl4">
+            <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs4"
+                    applyToTectonicRegionType="Subduction Intraslab">
+                <logicTreeBranch branchID="AB_SS">
+ <uncertaintyModel>AtkinsonBoore2003SSlab</uncertaintyModel>
+                    <uncertaintyWeight>0.25</uncertaintyWeight>
+                </logicTreeBranch>
+                <logicTreeBranch branchID="M_SS">
+ <uncertaintyModel>McVerry2006SSlab</uncertaintyModel>
+                    <uncertaintyWeight>0.25</uncertaintyWeight>
+                </logicTreeBranch>		
+                <logicTreeBranch branchID="Z_SS">
+ <uncertaintyModel>ZhaoEtAl2006SSlab</uncertaintyModel>
+                    <uncertaintyWeight>0.25</uncertaintyWeight>
+                </logicTreeBranch>
+                <logicTreeBranch branchID="BCH2_SS">
+ <uncertaintyModel>AbrahamsonEtAl2015SSlab</uncertaintyModel>
+                    <uncertaintyWeight>0.25</uncertaintyWeight>
+                </logicTreeBranch>		
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+    </logicTree>
+</nrml>
